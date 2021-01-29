@@ -1,32 +1,61 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <header>
+      <h3>Weather</h3>
+    </header>
+    <div class="container">
+      <nav>
+        <nav-bar></nav-bar>
+      </nav>
+      <main>
+        <main-container></main-container>
+      </main>
     </div>
-    <router-view/>
   </div>
 </template>
 
+<script>
+import navBar from "@/components/nav-bar";
+import mainContainer from "@/components/main-container";
+
+export default {
+  name: "app",
+  components: {
+    "nav-bar": navBar,
+    "main-container": mainContainer,
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(253, 199, 141, 1) 11.3%,
+    rgba(249, 143, 253, 1) 100.2%
+  );
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+header {
+  display: none;
+}
+@media screen AND (min-width: 1201px) {
+  header {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 1px 1px 10px black;
+    margin-bottom: 10px;
+  }
+  .container {
+    display: flex;
+  }
+  nav {
+    width: 25%;
+  }
+  main {
+    width: 75%;
   }
 }
 </style>

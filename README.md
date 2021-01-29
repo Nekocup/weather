@@ -1,24 +1,10 @@
-# weather
+# 天氣api串接
 
-## Project setup
-```
-npm install
-```
+網址：https://nekocup.github.io/weather/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 簡介
+此專案使用 vue 作為框架，顯示台灣所有縣市未來的天氣預報
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* axios串接氣象局api
+* 使用 vuex 傳送組件間的資料
+* scss 手刻簡單的RWD
