@@ -1,7 +1,5 @@
 # 天氣api串接
 
-網址：https://nekocup.github.io/weather/
-
 ## 簡介
 此專案使用 vue 作為框架，顯示台灣所有縣市未來的天氣預報
 
